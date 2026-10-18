@@ -20,3 +20,14 @@ else:
         count = count + 1       # move to the next number
 
     print(f"The sum of the first {n} natural numbers is {total}.")
+
+
+# This part prints a right-angled triangle of asterisks.
+rows = int(input("Enter the number of rows: "))
+
+if rows < 1:
+    # A triangle needs at least one row
+    print("Rows must be 1 or more to draw a triangle.")
+else:
+    for i in range(1, rows + 1):   # i is the current row number
+        print("*" * i)             # row i has i stars
