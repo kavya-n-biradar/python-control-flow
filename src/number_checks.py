@@ -1,16 +1,22 @@
+# Program to classify an integer as even or odd, and as positive, negative or zero
+
 # Ask the user to enter an integer and store it in a variable
-number = int(input("Enter an integer: "))
+try:
+    number = int(input("Enter an integer: "))
+except ValueError:
+    print("Please enter a valid integer.")
+else:
+    # % modulus operator returns the remainder of a division operation.
+    # A remainder of 0 when dividing by 2 means the number is even.
+    if number % 2 == 0:
+        print("The number is even.")
+    else:
+        print("The number is odd.")
 
-# % modulus operator returns the remainder of a division operation.
-if number % 2 == 0: # Check if the number is even
-    print("The number is even.")
-else: # Check if the number is odd
-    print("The number is odd.") 
-
-# Check if the number is positive, negative, or zero
-if number > 0:  # check if the number is positive
-    print("The number is positive.")
-elif number < 0:  # check if the number is negative
-    print("The number is negative.")
-else: # check if the number is zero
-    print("The number is zero.")
+    # Check if the number is positive, negative, or zero
+    if number > 0:
+        print("The number is positive.")
+    elif number < 0:
+        print("The number is negative.")
+    else:
+        print("The number is zero.")
